@@ -1,4 +1,4 @@
-import { Config } from 'protractor';
+import { Config, browser } from 'protractor';
 
 export const config: Config = {
   framework: 'jasmine',
@@ -10,6 +10,8 @@ export const config: Config = {
     chromeOptions: {
       args: ['--headless'],
     }
-  }
-
+  },
+  onPrepare: () => {
+    browser.ignoreSynchronization = true;
+}
 };
