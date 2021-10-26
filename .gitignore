@@ -160,3 +160,4 @@ dist
 
 # Typescript
 dist
+!reports
