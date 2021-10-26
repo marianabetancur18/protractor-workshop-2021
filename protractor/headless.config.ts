@@ -8,9 +8,8 @@ export const config: Config = {
   SELENIUM_PROMISE_MANAGER : false,
   capabilities: {
     browserName: 'chrome',
-    count: 1,
     chromeOptions: {
-      args: ['--headless'],
+      args: ['--headless', '--disable-gpu']
     }
   },
   onPrepare: () => {
